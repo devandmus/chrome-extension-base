@@ -1,0 +1,38 @@
+{
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  },
+
+  "manifest_version": 2,
+  "name": "__APP_NAME__",
+  "version": "__VERSION__",
+
+  "default_locale": "es",
+  "description": "__DESCRIPTION__",
+  
+  "icons": {
+    "16": "icon/16.png",
+    "32": "icon/32.png",
+    "48": "icon/48.png",
+    "128": "icon/128.png"
+  },
+  
+  "permissions": [
+    "__ONE__",
+    "__TWO__"
+  ],
+
+  "content_scripts": [
+    {
+      "run_at": "document_end",
+      "matches": ["https://__URL__/*"],
+      "js": ["__FILE__.js"]
+    }
+  ],
+}
+
+
+
+
